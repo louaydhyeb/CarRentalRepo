@@ -169,31 +169,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3a-M4-1A7">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3a-M4-1A7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YES-lF-zC9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    </mapView>
-                                </subviews>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="YES-lF-zC9" firstAttribute="leading" secondItem="a3a-M4-1A7" secondAttribute="leading" id="DGs-PV-yJ0"/>
-                                    <constraint firstAttribute="bottom" secondItem="YES-lF-zC9" secondAttribute="bottom" id="MIy-SG-xlX"/>
-                                    <constraint firstItem="YES-lF-zC9" firstAttribute="width" secondItem="a3a-M4-1A7" secondAttribute="width" id="QEM-Ro-tOI"/>
-                                    <constraint firstAttribute="trailing" secondItem="YES-lF-zC9" secondAttribute="trailing" id="YTF-Sl-WMz"/>
-                                    <constraint firstItem="YES-lF-zC9" firstAttribute="height" secondItem="a3a-M4-1A7" secondAttribute="height" id="mMi-6H-hTi"/>
-                                    <constraint firstItem="YES-lF-zC9" firstAttribute="top" secondItem="a3a-M4-1A7" secondAttribute="top" id="wde-Bm-MrN"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="a3a-M4-1A7" secondAttribute="trailing" id="Ghq-Ah-Ir3"/>
-                            <constraint firstAttribute="bottom" secondItem="a3a-M4-1A7" secondAttribute="bottom" id="SCH-8Q-M5S"/>
-                            <constraint firstItem="a3a-M4-1A7" firstAttribute="top" secondItem="dLz-oB-nJy" secondAttribute="top" id="dUZ-80-LZS"/>
-                            <constraint firstItem="a3a-M4-1A7" firstAttribute="leading" secondItem="dLz-oB-nJy" secondAttribute="leading" id="jQ9-sh-BxU"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y3W-1Z-QUn"/>
                     </view>
                 </viewController>

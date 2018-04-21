@@ -14,6 +14,9 @@ target 'CariocaMenuDemo' do
   use_frameworks!
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'GooglePlaces'
+pod 'GooglePlacePicker'
+pod 'GoogleMaps'
 
 
   # Pods for CariocaMenuDemo

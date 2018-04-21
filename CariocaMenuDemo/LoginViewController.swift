@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
-    let URLLogin = "http://41.226.11.243:10080/carrental/ScriptsAndroid/v1/userLogin.php"
+    let URLLogin = "http://192.168.254.129/Scripts/v1/userLogin.php"
     @IBOutlet weak var textUser: UITextField!
     @IBOutlet weak var textPass: UITextField!
     
@@ -48,7 +48,9 @@ class LoginViewController: UIViewController {
                 alert2.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert2, animated: true, completion: nil)
             }
-        }    }
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
