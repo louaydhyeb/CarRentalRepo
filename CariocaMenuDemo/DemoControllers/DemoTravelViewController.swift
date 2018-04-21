@@ -1,36 +1,48 @@
 import UIKit
 import GoogleMaps
+import Alamofire
+import SwiftyJSON
 
-class DemoTravelViewController: UIViewController, DemoController {
-
-	var menuController: CariocaController?
-
-	override var preferredStatusBarStyle: UIStatusBarStyle { return .default }
-
-	override func viewWillAppear(_ animated: Bool) {
-		self.view.addCariocaGestureHelpers([.left, .right], width: 30.0)
+class DemoTravelViewController: UIViewController, DemoController, GMSMapViewDelegate {
+        let URL_GET_TEAMS:String = "http://192.168.254.129/Scripts/v1/showAddress.php"
+        var menuController: CariocaController?
         
-	}
-    override func viewDidLoad() {
-        var geocoder = CLGeocoder()
-        geocoder.geocodeAddressString("Nour Jaafer") {
-            placemarks, error in
-            let placemark = placemarks?.first
+        override var preferredStatusBarStyle: UIStatusBarStyle { return .default }
+        
+        override func viewWillAppear(_ animated: Bool) {
+            self.view.addCariocaGestureHelpers([.left, .right], width: 30.0)
             
-            let camera = GMSCameraPosition.camera(withLatitude: 36.911786, longitude: 10.187836, zoom: 15.0)
-            let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-            mapView.settings.myLocationButton = true
-            mapView.isMyLocationEnabled = true
-            mapView.delegate = self as? GMSMapViewDelegate
-            mapView.settings.zoomGestures = true
-            self.view = mapView
-            
-            // Creates a marker in the center of the map.
-            let marker = GMSMarker()
-            marker.position = CLLocationCoordinate2D(latitude:  36.911786, longitude: 10.187836)
-            marker.title = "Nour Jaafer"
-            marker.snippet = "Australia"
-            marker.map = mapView
         }
-    }
-}
+        override func viewDidLoad() {
+             super.viewDidLoad()
+        }
+        override func loadView() {
+            let camera = GMSCameraPosition.camera(withLatitude: 36.806495, longitude: 10.181532, zoom: 10.0)
+            let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+            self.view = mapView
+            Alamofire.request(URL_GET_TEAMS, method: .get).validate().responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    
+                    for i in 0..<json.count {
+                        
+                        let marker = GMSMarker()
+                        marker.position = CLLocationCoordinate2D(latitude: json[i]["AgenceLat"].doubleValue, longitude: json[i]["AgenceLong"].doubleValue)
+                        marker.title =  json[i]["AgenceName"].stringValue
+                        marker.snippet = "Australia"
+                        marker.map = mapView
+                    }
+                    
+                    
+                    
+                case .failure(let error):
+                    print(error)
+                    let message = "cannot reach server "
+                    let alert2 = UIAlertController(title: "error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                    alert2.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert2, animated: true, completion: nil)
+                }
+            }
+     
+    }}

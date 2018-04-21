@@ -169,13 +169,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3a-M4-1A7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3a-M4-1A7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a3a-M4-1A7" firstAttribute="top" secondItem="dLz-oB-nJy" secondAttribute="top" id="2TW-M5-IG9"/>
+                            <constraint firstItem="a3a-M4-1A7" firstAttribute="trailing" secondItem="y3W-1Z-QUn" secondAttribute="trailing" id="AV6-r2-btt"/>
+                            <constraint firstItem="a3a-M4-1A7" firstAttribute="leading" secondItem="y3W-1Z-QUn" secondAttribute="leading" id="CXy-mc-Mq6"/>
+                            <constraint firstItem="a3a-M4-1A7" firstAttribute="bottom" secondItem="y3W-1Z-QUn" secondAttribute="bottom" id="ikz-Ru-ck5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y3W-1Z-QUn"/>
                     </view>
                 </viewController>
