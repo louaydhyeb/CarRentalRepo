@@ -11,7 +11,7 @@ import Alamofire
 class RegistrationViewController: UIViewController {
 
     
-    let URLRegsiter = "http://41.226.11.243:10080/carrental/ScriptsAndroid/v1/registerUserIos.php"
+    let URLRegsiter = "http://192.168.254.129/Scripts/v1/registerUserIos.php"
     @IBOutlet weak var textUser: UITextField!
     
     @IBOutlet weak var textPass: UITextField!
