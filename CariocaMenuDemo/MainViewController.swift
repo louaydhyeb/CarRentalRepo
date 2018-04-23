@@ -88,7 +88,7 @@ extension MainViewController: CariocaDelegate {
 		case 2:
 			displayDemo(DemoAboutViewController.fromStoryboard())
 		case 3:
-			displayDemo(DemoTravelViewController.fromStoryboard())
+            displayDemo(DemoTravelViewController.fromStoryboard())
 		case 4:
 			displayDemo(DemoIdeaViewController.fromStoryboard())
 		default:

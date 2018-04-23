@@ -9,8 +9,12 @@ class DemoAboutViewController: UIViewController, DemoController {
 	@IBAction func actionTwitter(_ sender: UIButton) {
 		openURL("http://bit.ly/2CWvb89")
 	}
-
-	@IBAction func actionGithub(_ sender: UIButton) {
+    
+    
+    @IBAction func toMap(_ sender: UIButton) {
+        
+    }
+    @IBAction func actionGithub(_ sender: UIButton) {
 		openURL("http://bit.ly/2AVql9B")
 	}
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		257468C67D4AE22B7EEA4B48 /* Pods_CariocaMenu_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7862CFB9EE7298DF5E2D4554 /* Pods_CariocaMenu_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		84481CA3208D5A5600230C95 /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84481CA2208D5A5600230C95 /* MyMapViewController.swift */; };
 		84A973292073279700A08ACD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A9732A2073279700A08ACD /* Alamofire.framework */; };
 		84AD8A44207315340068EC17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD8A43207315340068EC17 /* LoginViewController.swift */; };
 		84AD8A462073159D0068EC17 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD8A452073159D0068EC17 /* RegistrationViewController.swift */; };
@@ -79,6 +80,7 @@
 		53B08653C5EDD76E393753EF /* Pods_CariocaMenuDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariocaMenuDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6154D2A119E0230ECBDAA5C9 /* Pods-CariocaMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariocaMenuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CariocaMenuDemo/Pods-CariocaMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7862CFB9EE7298DF5E2D4554 /* Pods_CariocaMenu_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariocaMenu_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84481CA2208D5A5600230C95 /* MyMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
 		84A9732A2073279700A08ACD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AD8A43207315340068EC17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84AD8A452073159D0068EC17 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				FAA6988B1FE17F71008FC0E1 /* DemoSettingsViewController copy.swift */,
 				FA6223971FE30FA500F3034B /* DemoTravelViewController.swift */,
 				FA6223961FE30FA500F3034B /* DemoAboutViewController.swift */,
+				84481CA2208D5A5600230C95 /* MyMapViewController.swift */,
 			);
 			path = DemoControllers;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				FA9E9A661FC4B6C200C57175 /* CariocaMenu+Enums.swift in Sources */,
 				84AD8A462073159D0068EC17 /* RegistrationViewController.swift in Sources */,
 				FAFF054C1FD176AF002FAB75 /* CariocaIndicatorView.swift in Sources */,
+				84481CA3208D5A5600230C95 /* MyMapViewController.swift in Sources */,
 				FA89D5C71FDD577900404DE6 /* CariocaIndicatorConfiguration.swift in Sources */,
 				FAA698881FE1431E008FC0E1 /* Storyboardable.swift in Sources */,
 				FAA6988A1FE16DE1008FC0E1 /* DemoController.swift in Sources */,
