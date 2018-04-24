@@ -29,6 +29,27 @@ class LoginViewController: UIViewController {
                 let json = JSON(value)
                 if json["error"] == false{
                     print("logged in")
+                    let id = String(describing: json["firstname"])
+                    let a = String(describing: json["lastname"])
+                    let b = String(describing: json["id"])
+                    let c = String(describing: json["email"])
+                    let d = String(describing: json["url"])
+                    let e = String(describing: json["address"])
+                    let ph = String(describing: json["phone"])
+                    let url = String(describing: json["url"])
+                    let username = String(describing: json["username"])
+                    
+                    
+                    var defaults = UserDefaults.standard
+                    defaults.set(id,     forKey: "firstname")
+                    defaults.set(ph,     forKey: "phone")
+                    defaults.set(c,     forKey: "email")
+                    defaults.set(d,     forKey: "photo")
+                    defaults.set(e,     forKey: "address")
+                    defaults.set(a,     forKey: "lastname")
+                    defaults.set(b,     forKey: "id")
+                    defaults.set(username,     forKey: "username")
+                    defaults.set(url,     forKey: "url")
                     self.performSegue(withIdentifier: "toMenu", sender: nil)
                 } else if json["error"] == true {
                     print("not loggedin")
@@ -62,7 +83,15 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        let preferences = UserDefaults.standard
+        
+        if(preferences.string(forKey: "username") != nil)
+        {
+            self.performSegue(withIdentifier: "toMenu", sender: nil)
+            print("T3adit")
+        }
+    }
 
     /*
     // MARK: - Navigation

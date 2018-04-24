@@ -15,11 +15,15 @@ class DemoTravelViewController: UIViewController, DemoController, GMSMapViewDele
         }
         override func viewDidLoad() {
              super.viewDidLoad()
+            
+            
         }
         override func loadView() {
-            let camera = GMSCameraPosition.camera(withLatitude: 36.806495, longitude: 10.181532, zoom: 10.0)
+            
+            let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
             let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-            self.view = mapView
+            mapView.isMyLocationEnabled = true
+            view = mapView
             Alamofire.request(URL_GET_TEAMS, method: .get).validate().responseJSON { response in
                 switch response.result {
                 case .success(let value):
@@ -45,4 +49,6 @@ class DemoTravelViewController: UIViewController, DemoController, GMSMapViewDele
                 }
             }
      
-    }}
+    }
+    
+}
