@@ -7,6 +7,7 @@ target 'CariocaMenu-iOS' do
 
   # Pods for CariocaMenu-iOS
     pod 'Alamofire'
+    pod 'Kingfisher'
 end
 
 target 'CariocaMenuDemo' do
@@ -17,7 +18,7 @@ pod 'SwiftyJSON'
 pod 'GooglePlaces'
 pod 'GooglePlacePicker'
 pod 'GoogleMaps'
-
+pod 'Kingfisher'
 
   # Pods for CariocaMenuDemo
 

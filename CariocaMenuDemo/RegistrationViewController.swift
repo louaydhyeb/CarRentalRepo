@@ -11,7 +11,7 @@ import Alamofire
 class RegistrationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var photoUrl: URL?
-    let URLRegsiter = "http://192.168.254.129/Scripts/v1/registerUserIos.php"
+    let URLRegsiter = "http://192.168.254.129/Scripts/v1/registerUser2.php"
     @IBOutlet weak var textUser: UITextField!
     
     @IBOutlet weak var imageUser: UIImageView!
@@ -67,27 +67,68 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
     @IBAction func Reg(_ sender: UIButton) {
         
         let parameters:Parameters=[
+            //"image":photoUrl,
             "username":textUser.text!,
             "password":textPass.text!,
             "email":textMail.text!,
+            "phone":txtPhone.text!,
             "firstname":txtFirst.text!,
             "lastname":txtLast.text!,
-            "phone":txtPhone.text!,
             "address":txtLocation.text!,
-            ]
+        ]
         
-        Alamofire.request(URLRegsiter,method: .post, parameters: parameters ).responseJSON{
-            
-            response in
-            print(response)
-            
-            if let result = response.result.value{
+        // Image to upload:
+        let imageToUploadURL = photoUrl
+        
+        // Server address (replace this with the address of your own server):
+        //let url = "http://localhost:8888/upload_image.php"
+        
+        // Use Alamofire to upload the image
+        if imageToUploadURL != nil {
+            Alamofire.upload(
+                multipartFormData: { multipartFormData in
+                    // On the PHP side you can retrive the image using $_FILES["image"]["tmp_name"]
+                    multipartFormData.append(imageToUploadURL!, withName: "image")
+                    for (key, val) in parameters {
+                        multipartFormData.append((val as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                    }
+            },
+                to: URLRegsiter,
+                encodingCompletion: { encodingResult in
+                    switch encodingResult {
+                    case .success(let upload, _, _):
+                        upload.responseJSON { response in
+                            if let jsonResponse = response.result.value as? [String: Any] {
+                                print(jsonResponse)
+                                self.performSegue(withIdentifier: "toLogin", sender: nil)
+                            }
+                        }
+                    case .failure(let encodingError):
+                        print(encodingError)
+                    }
+            }
+            )
+            Alamofire.request(URLRegsiter,method: .post, parameters: parameters ).responseJSON{
                 
-                let jsonData = result as! NSDictionary
+                response in
+                print(response)
                 
-                print(jsonData.value(forKey:"message")as! String? as Any)
+                if let result = response.result.value{
+                    
+                    let jsonData = result as! NSDictionary
+                    
+                    print(jsonData.value(forKey:"message")as! String? as Any)
+                }
             }
         }
+        else{
+            let message = "Please Upload your picture "
+            let alert = UIAlertController(title: "Wrong", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        
         
     }
     override func viewDidLoad() {

@@ -1,25 +1,32 @@
 import UIKit
 
+import Kingfisher
+
 class DemoAboutViewController: UIViewController, DemoController {
 
 	var menuController: CariocaController?
 
 	override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 
-	@IBAction func actionTwitter(_ sender: UIButton) {
-		openURL("http://bit.ly/2CWvb89")
-	}
+    @IBOutlet weak var imgUser: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
     
-    
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblPhone: UILabel!
+    @IBOutlet weak var email: UILabel!
     @IBAction func toMap(_ sender: UIButton) {
         
     }
-    @IBAction func actionGithub(_ sender: UIButton) {
-		openURL("http://bit.ly/2AVql9B")
-	}
-
-	func openURL(_ urlString: String) {
-		guard let url = URL(string: urlString) else { print("Could not open \(urlString)");return }
-		UIApplication.shared.openURL(url)
-	}
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        lblName.text = UserDefaults.standard.string(forKey: "firstname") as? String
+        lblPhone.text = UserDefaults.standard.string(forKey: "phone") as? String
+        email.text = UserDefaults.standard.string(forKey: "email") as? String
+        lblAddress.text = UserDefaults.standard.string(forKey: "address") as? String
+        lblPhone.text = UserDefaults.standard.string(forKey: "phone") as? String
+        let url = URL(string: (UserDefaults.standard.string(forKey: "url") as? String)! )
+        imgUser.kf.setImage(with: url)
+    }
+    
+   
 }

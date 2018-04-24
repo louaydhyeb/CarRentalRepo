@@ -48,8 +48,8 @@ class MyMapViewController: UIViewController,GMSMapViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTap) )
+        self.navigationItem.leftBarButtonItem = cancelButton
         // Do any additional setup after loading the view.
         
         
@@ -58,5 +58,18 @@ class MyMapViewController: UIViewController,GMSMapViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @objc func cancelTap(){
+        print("Halluluijah")
+        //Perform a segue to the profile User
+         self.performSegue(withIdentifier: "toUser", sender: nil)
+    }
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
+    }
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "Agence") as! AgencyViewController
+        myVC.stringPassed = marker.title!
+        navigationController?.pushViewController(myVC, animated: true)
     }
 }
