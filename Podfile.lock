@@ -1,5 +1,9 @@
 PODS:
   - Alamofire (4.7.0)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - Cosmos (15.0.0)
+  - EZLoadingActivity (1.01)
   - GoogleMaps (2.6.0):
     - GoogleMaps/Maps (= 2.6.0)
   - GoogleMaps/Base (2.6.0)
@@ -11,24 +15,33 @@ PODS:
   - GooglePlaces (2.6.0):
     - GoogleMaps/Base (= 2.6.0)
   - Kingfisher (4.6.4)
+  - SwiftyButton (0.8.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage
+  - Cosmos
+  - EZLoadingActivity
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
   - Kingfisher
+  - SwiftyButton
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
+  EZLoadingActivity: edd7e387e5197b116ce2cccb3fd747ababc2a510
   GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
   GooglePlacePicker: e4488625effb006f59de49e14b7a603e463e4261
   GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
   Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
+  SwiftyButton: 093e3fe2becf3ae31c0f6c1c6987b79a93fb3ecb
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: b0fa02fba6e8cbafe8a9236c4df2fadcfa65ac34
+PODFILE CHECKSUM: a916af61fe0e7bdf932fc2a3fc75f639e89836bf
 
 COCOAPODS: 1.4.0

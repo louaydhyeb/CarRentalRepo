@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		257468C67D4AE22B7EEA4B48 /* Pods_CariocaMenu_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7862CFB9EE7298DF5E2D4554 /* Pods_CariocaMenu_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		84381C1F208E8FD000640E08 /* AgencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84381C1E208E8FD000640E08 /* AgencyViewController.swift */; };
+		84470480209678A80015E02C /* AgenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447047F209678A80015E02C /* AgenceCollectionViewCell.swift */; };
+		84470484209681980015E02C /* Agence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84470483209681980015E02C /* Agence.swift */; };
 		84481CA3208D5A5600230C95 /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84481CA2208D5A5600230C95 /* MyMapViewController.swift */; };
 		84A973292073279700A08ACD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A9732A2073279700A08ACD /* Alamofire.framework */; };
 		84AD8A44207315340068EC17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD8A43207315340068EC17 /* LoginViewController.swift */; };
 		84AD8A462073159D0068EC17 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD8A452073159D0068EC17 /* RegistrationViewController.swift */; };
+		84B4267120AD1A77005CC761 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4267020AD1A77005CC761 /* CosmosDistrib.swift */; };
 		8933C7851EB5B820000D00A4 /* CariocaMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* CariocaMenu.swift */; };
 		E649E5141541FCAB785DB1EC /* Pods_CariocaMenuDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B08653C5EDD76E393753EF /* Pods_CariocaMenuDemo.framework */; };
 		FA150C171FD8163B001D1D39 /* CariocaIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA150C161FD8163B001D1D39 /* CariocaIcon.swift */; };
@@ -54,7 +57,7 @@
 		FAA698851FE138F0008FC0E1 /* DemoHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA698831FE138F0008FC0E1 /* DemoHomeViewController.swift */; };
 		FAA698881FE1431E008FC0E1 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA698871FE1431E008FC0E1 /* Storyboardable.swift */; };
 		FAA6988A1FE16DE1008FC0E1 /* DemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA698891FE16DE1008FC0E1 /* DemoController.swift */; };
-		FAA6988C1FE17F71008FC0E1 /* DemoSettingsViewController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6988B1FE17F71008FC0E1 /* DemoSettingsViewController copy.swift */; };
+		FAA6988C1FE17F71008FC0E1 /* DemoSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6988B1FE17F71008FC0E1 /* DemoSettingsViewController.swift */; };
 		FAC0723C1FE08EAB0011FF0C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0723B1FE08EAB0011FF0C /* MainViewController.swift */; };
 		FAC52FFC1FD1C06C007FE0AD /* CariocaMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC52FFB1FD1C06C007FE0AD /* CariocaMenuItem.swift */; };
 		FAC52FFE1FD1C06C007FE0AD /* CariocaMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC52FFB1FD1C06C007FE0AD /* CariocaMenuItem.swift */; };
@@ -82,10 +85,13 @@
 		6154D2A119E0230ECBDAA5C9 /* Pods-CariocaMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariocaMenuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CariocaMenuDemo/Pods-CariocaMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7862CFB9EE7298DF5E2D4554 /* Pods_CariocaMenu_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariocaMenu_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84381C1E208E8FD000640E08 /* AgencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgencyViewController.swift; sourceTree = "<group>"; };
+		8447047F209678A80015E02C /* AgenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgenceCollectionViewCell.swift; sourceTree = "<group>"; };
+		84470483209681980015E02C /* Agence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agence.swift; sourceTree = "<group>"; };
 		84481CA2208D5A5600230C95 /* MyMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
 		84A9732A2073279700A08ACD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AD8A43207315340068EC17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84AD8A452073159D0068EC17 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		84B4267020AD1A77005CC761 /* CosmosDistrib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* CariocaMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaMenu.swift; sourceTree = "<group>"; };
 		9BBF91EFA6873EB81E2632D7 /* Pods-CariocaMenuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariocaMenuDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CariocaMenuDemo/Pods-CariocaMenuDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A73A6306A5188AF23744E3A4 /* Pods-CariocaMenu-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariocaMenu-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-CariocaMenu-iOS/Pods-CariocaMenu-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +122,7 @@
 		FAA698831FE138F0008FC0E1 /* DemoHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoHomeViewController.swift; sourceTree = "<group>"; };
 		FAA698871FE1431E008FC0E1 /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		FAA698891FE16DE1008FC0E1 /* DemoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoController.swift; sourceTree = "<group>"; };
-		FAA6988B1FE17F71008FC0E1 /* DemoSettingsViewController copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DemoSettingsViewController copy.swift"; sourceTree = "<group>"; };
+		FAA6988B1FE17F71008FC0E1 /* DemoSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoSettingsViewController.swift; sourceTree = "<group>"; };
 		FAC0723B1FE08EAB0011FF0C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FAC52FFB1FD1C06C007FE0AD /* CariocaMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaMenuItem.swift; sourceTree = "<group>"; };
 		FAC89F051FC5522900C988B6 /* CariocaGestureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaGestureManager.swift; sourceTree = "<group>"; };
@@ -274,6 +280,7 @@
 				FA9E9A4F1FC4A38F00C57175 /* LaunchScreen.storyboard */,
 				FA1C2A401FDC683E001326CD /* external */,
 				FA9E9A521FC4A38F00C57175 /* Info.plist */,
+				84B4267020AD1A77005CC761 /* CosmosDistrib.swift */,
 			);
 			path = CariocaMenuDemo;
 			sourceTree = "<group>";
@@ -284,11 +291,13 @@
 				FAA698891FE16DE1008FC0E1 /* DemoController.swift */,
 				FAA698831FE138F0008FC0E1 /* DemoHomeViewController.swift */,
 				FA6223981FE30FA500F3034B /* DemoIdeaViewController.swift */,
-				FAA6988B1FE17F71008FC0E1 /* DemoSettingsViewController copy.swift */,
+				FAA6988B1FE17F71008FC0E1 /* DemoSettingsViewController.swift */,
 				FA6223971FE30FA500F3034B /* DemoTravelViewController.swift */,
 				FA6223961FE30FA500F3034B /* DemoAboutViewController.swift */,
 				84481CA2208D5A5600230C95 /* MyMapViewController.swift */,
 				84381C1E208E8FD000640E08 /* AgencyViewController.swift */,
+				8447047F209678A80015E02C /* AgenceCollectionViewCell.swift */,
+				84470483209681980015E02C /* Agence.swift */,
 			);
 			path = DemoControllers;
 			sourceTree = "<group>";
@@ -466,12 +475,20 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CariocaMenuDemo/Pods-CariocaMenuDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/EZLoadingActivity/EZLoadingActivity.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZLoadingActivity.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,13 +614,16 @@
 				FA62239A1FE30FA500F3034B /* DemoTravelViewController.swift in Sources */,
 				84AD8A44207315340068EC17 /* LoginViewController.swift in Sources */,
 				FAE376CD1FDC856200379953 /* CustomPolygonIndicator.swift in Sources */,
-				FAA6988C1FE17F71008FC0E1 /* DemoSettingsViewController copy.swift in Sources */,
+				FAA6988C1FE17F71008FC0E1 /* DemoSettingsViewController.swift in Sources */,
 				FA6223991FE30FA500F3034B /* DemoAboutViewController.swift in Sources */,
+				84470480209678A80015E02C /* AgenceCollectionViewCell.swift in Sources */,
 				FA1C2A421FDC683E001326CD /* ASGradientView.swift in Sources */,
 				FA9E9A6A1FC4BDFA00C57175 /* CariocaMenuContainerView.swift in Sources */,
 				FAA698851FE138F0008FC0E1 /* DemoHomeViewController.swift in Sources */,
+				84B4267120AD1A77005CC761 /* CosmosDistrib.swift in Sources */,
 				FAC89F081FC5522A00C988B6 /* CariocaGestureManager.swift in Sources */,
 				FA150C191FD8163B001D1D39 /* CariocaIcon.swift in Sources */,
+				84470484209681980015E02C /* Agence.swift in Sources */,
 				FA9E9A601FC4AA4900C57175 /* CariocaMenu+Protocols.swift in Sources */,
 				FAC0723C1FE08EAB0011FF0C /* MainViewController.swift in Sources */,
 				FA9E9A471FC4A38F00C57175 /* AppDelegate.swift in Sources */,
