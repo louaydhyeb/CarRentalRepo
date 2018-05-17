@@ -19,7 +19,10 @@ pod 'GooglePlaces'
 pod 'GooglePlacePicker'
 pod 'GoogleMaps'
 pod 'Kingfisher'
-
+pod 'EZLoadingActivity'
+pod 'AlamofireImage'
+pod 'SwiftyButton'
+pod 'Cosmos'
   # Pods for CariocaMenuDemo
 
 end

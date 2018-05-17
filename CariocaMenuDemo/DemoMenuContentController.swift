@@ -15,8 +15,7 @@ class DemoMenuContentController: UITableViewController, CariocaDataSource {
 		CariocaMenuItem("Welcome", .emoji("🖐")),
 		CariocaMenuItem("Cars", .emoji("🚙")),
 		CariocaMenuItem("Profile", .emoji("👤")),
-		CariocaMenuItem("Localisation", .emoji("✈️")),
-		CariocaMenuItem("Webview", .icon(UIImage(named: "hamburger")!))
+		CariocaMenuItem("Localisation", .emoji("✈️"))
 	]
 	///This defines the height of each menu item
 	func heightForRow() -> CGFloat { return 60.0 }
